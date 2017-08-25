@@ -1,0 +1,24 @@
+.listHead{
+   position: relative;
+   height: 30px;
+}
+.listHead button{
+   float: left;
+}
+.example-input{
+   height: 30px;
+   float: left;
+}
+.example-input .ant-input {
+   width: 200px;
+   margin: 0 8px 8px 0;
+}
+.ant-table-body table {
+   font-size: 14px;
+}
+.listHead button {
+   font-size: 14px;
+}
+.example-input input {
+   font-size: 14px;
+}

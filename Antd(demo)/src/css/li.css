@@ -1,0 +1,28 @@
+.oList .ant-card {
+   height: 100%;
+}
+.oList .custom-image {
+   height: 80%;
+}
+.oList .custom-image img{
+   height: 100%;
+   border-radius: 8px;
+}
+.oList .custom-card{
+   padding: 0;
+   height: 20%;
+}
+.oList .custom-card h3{
+   margin-top: 8px;
+   text-align: center;
+   overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.oList .custom-card p{
+   margin: 0;
+   text-align: center;
+   overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

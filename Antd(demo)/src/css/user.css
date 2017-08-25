@@ -1,0 +1,104 @@
+.custom-image img {
+  display: block;
+}
+.custom-card {
+  padding: 10px 16px;
+}
+.custom-card p {
+  color: #999;
+}
+.ant-card{
+   height: 300px;
+   border-radius: 8px;
+}
+.gutter-box2 p{
+   padding-left: 22px;
+}
+.gutter-box2 p:nth-of-type(1){
+   margin-top: 20px;
+}
+.custom-image img{
+   height: 240px;
+}
+.gutter-example .ant-row > div {
+  background: transparent;
+  border: 0;
+}
+.gutter-example .gutter-box {
+  background: #fff;
+  padding: 5px 0;
+}
+.ant-col-4 .gutter-box{
+   height: 300px;
+   margin-bottom: 40px;
+   border-radius: 8px;
+   padding: 0;
+}
+.ant-col-10 .gutter-box{
+   height: 300px;
+   margin-bottom: 40px;
+   border-radius: 8px;
+   padding: 0;
+}
+.ant-col-10 .gutter-box .ant-card-extra a{
+   color: #108ee9;
+}
+.ant-col-10 .gutter-box .ant-card-extra a:hover{
+   color: #000;
+}
+.ant-col-24 .gutter-box:nth-of-type(1){
+   padding: 0;
+   overflow: hidden;
+   margin-bottom: 10px;
+}
+.ant-col-24 .gutter-box:nth-of-type(2){
+   min-height: 410px;
+   border-radius: 8px;
+   padding: 0;
+}
+.gutter-example{
+   padding: 50px 150px 0 150px;
+}
+.ant-card-head h3{
+   font-size: 16px;
+}
+.ant-pagination{
+   margin-right: 10px;
+}
+.ant-btn{
+   margin-right: 10px;
+}
+.anticon-folder{
+   position: relative;
+   top: 6px;
+   right: 20px;
+   float: right;
+}
+.ant-badge{
+   position: absolute;
+   right: 0;
+   top: 5px;
+}
+.custom-card h3{
+   font-size: 16px;
+   font-weight: bold;
+}
+.ant-card-body p{
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+.ant-card-head-title{
+   font-weight: bold;
+}
+.ant-timeline .ant-timeline-item-content {
+   font-size: 14px;
+}
+.ant-timeline .ant-timeline-item-content p{
+   font-weight: bold;
+}
+.gutter-box button {
+   font-size: 14px;
+}
+.ant-table-body table {
+   font-size: 14px;
+}

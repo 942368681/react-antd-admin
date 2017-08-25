@@ -1,0 +1,71 @@
+.global-search-wrapper {
+   padding-right: 50px;
+}
+
+.global-search {
+   width: 100%;
+}
+
+.global-search.ant-select-auto-complete .ant-select-selection--single {
+   margin-right: -46px;
+}
+
+.global-search.ant-select-auto-complete .ant-input-affix-wrapper .ant-input:not(:last-child) {
+   padding-right: 62px;
+}
+
+.global-search.ant-select-auto-complete .ant-input-affix-wrapper .ant-input-suffix {
+   right: 0;
+}
+
+.global-search.ant-select-auto-complete .ant-input-affix-wrapper .ant-input-suffix button {
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+}
+
+.global-search-item-count {
+   position: absolute;
+   right: 16px;
+}
+
+.movie {
+   position: relative;
+   height: 800px;
+}
+
+.movie .ant-input-search {
+   height: 35px;
+   width: 300px;
+   position: relative;
+   left: 50%;
+   margin-left: -150px;
+   margin-bottom: 20px;
+}
+
+.movie .oList {
+   width: 1110px;
+   height: 680px;
+   margin: auto;
+   background: #ececec;
+   padding: 20px 0 0 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.movie .oList li {
+   width: 200px;
+   height: 300px;
+   float: left;
+   margin-right: 20px;
+   margin-bottom: 20px;
+}
+
+.movie .ant-pagination {
+   margin-right: 0;
+   margin: auto;
+   bottom: 0;
+   float: right;
+   margin-right: 16%;
+   margin-top: 20px;
+}

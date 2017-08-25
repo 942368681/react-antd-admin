@@ -1,0 +1,15 @@
+#text-editor-container{
+   margin-bottom: 20px;
+}
+.editorBox .ant-btn{
+   width: 100px;
+   position: relative;
+   left: 50%;
+   margin-left: -50px;
+   margin-right: 0;
+   height: 35px;
+}
+.anticon-editor_H2{
+   position: relative;
+   top: 25%;
+}

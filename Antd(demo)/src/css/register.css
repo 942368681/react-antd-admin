@@ -1,0 +1,31 @@
+.ant-modal-body div{
+   width: 400px;
+   position: relative;
+   left: 50%;
+   margin-left: -200px;
+   margin-top: 80px;
+}
+dl{
+   width: 400px;
+   height: 30px;
+   margin-bottom: 20px;
+}
+dt,dd{
+   float: left;
+}
+dt{
+   font-size: 14px;
+   line-height: 30px;
+   height: 30px;
+   margin-right: 10px;
+   width: 70px;
+}
+dd{
+   width: 315px;
+}
+.ant-modal-body div div{
+   width: 144px;
+   position: relative;
+   left: 50%;
+   margin-left: -72px;
+}

@@ -1,0 +1,37 @@
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+#root{
+   background: url('../img/login.jpg') no-repeat;
+   position: relative;
+}
+.login-form{
+   width: 300px;
+   position: absolute;
+   left: 50%;
+   margin-left: -150px;
+   top: 40%
+}
+.login-form-button{
+   width: 300px;
+}
+.ant-modal,.ant-modal-content {
+   width: 600px;
+   height: 670px;
+}
+.ant-modal-footer{
+   display: none;
+}
+.registerNow{
+   color: #fff;
+}
+.rememberMe{
+   color: #fff;
+   margin-left: 110px;
+}

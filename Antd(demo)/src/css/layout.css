@@ -1,0 +1,77 @@
+#components-layout-demo-side .logo {
+  height: 32px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px;
+}
+.ant-layout-sider{
+   height: 902px;
+}
+.ant-layout{
+   height: 950px;
+}
+.ant-menu .ant-menu-item{
+   font-size: 18px;
+   height: 52px;
+   line-height: 52px;
+}
+.ant-menu .ant-menu-submenu-title{
+   height: 52px;
+   line-height: 52px;
+}
+.ant-menu .ant-menu-submenu-title{
+   font-size: 18px;
+}
+.ant-menu-sub .ant-menu-item{
+   font-size: 16px;
+}
+.ant-layout-sider-children a{
+   color:rgba(255, 255, 255, 0.67);
+   text-decoration: none;
+}
+.ant-layout-sider-children a:hover{
+   color:rgba(255, 255, 255, 1);
+   text-decoration: none;
+}
+.ant-layout-sider-children a:visited {
+   color:rgba(255, 255, 255, 1);
+   text-decoration: none;
+}
+.ant-layout-sider-children a:focus {
+   color:rgba(255, 255, 255, 1);
+   text-decoration: none;
+}
+
+.gutter-example .ant-row > div {
+  background: transparent;
+  border: 0;
+}
+.gutter-box {
+  background: #00A0E9;
+  padding: 5px 0;
+}
+.ant-layout-header p{
+   float: left;
+   font-size: 22px;
+   font-weight: bold;
+   margin-left: 1%;
+   width: 300px;
+}
+.ant-layout-header p span{
+   color: #9c35b3;
+   font-weight: normal;
+}
+.ant-layout-header .ant-avatar{
+   float: right;
+   width: 40px;
+   height: 40px;
+   position: relative;
+   right: 100px;
+   top: 50%;
+   margin-top: -20px;
+   cursor: pointer;
+}
+.ant-layout-header .ant-input-search{
+   float: right;
+   margin-right: 140px;
+}
