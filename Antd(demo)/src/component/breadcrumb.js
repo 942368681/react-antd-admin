@@ -48,9 +48,6 @@ class Bread extends Component {
             margin: '12px 0'
          }}>
             {list}
-            {/* <Breadcrumb.Item>
-               <a>{this.props.val}</a>
-            </Breadcrumb.Item> */}
             <Breadcrumb.Item>{this.props.data[this.props.data.length-1]}</Breadcrumb.Item>
          </Breadcrumb>
       );
