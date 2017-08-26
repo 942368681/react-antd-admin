@@ -129,7 +129,7 @@ class SiderDemo extends Component {
       let n = arr1.length;
       this.setState({favData: arr1, num: n});
    };
-
+   //生成面包屑
    getHash = (ev) => {
       let url=decodeURI(ev.target.href);
       let arr = url.split('/');
@@ -137,7 +137,10 @@ class SiderDemo extends Component {
       arr.splice(0, 1, 'Home');
       this.setState({breadArr: arr});
    };
-
+   //面包屑回退
+   back = (arr) => {
+      this.setState({breadArr: arr});
+   };
    render() {
       return (
          <Layout>
@@ -212,7 +215,7 @@ class SiderDemo extends Component {
                   margin: '0 16px'
                }}>
                   {/* 面包屑导航 */}
-                  <Bread data={this.state.breadArr}/> {/* 中间内容区域设置路由加载组件 */}
+                  <Bread data={this.state.breadArr} back = {this.back}/> {/* 中间内容区域设置路由加载组件 */}
                   <div style={{
                      padding: 24,
                      background: '#fff',

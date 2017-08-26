@@ -18,7 +18,8 @@ class NormalLoginForm extends Component {
    //注册框
    state = {
       ModalText: 'Content of the modal',
-      visible: false
+      visible: false,
+      txt:''
    }
    showModal = () => {
       this.setState({visible: true});
@@ -119,7 +120,7 @@ class NormalLoginForm extends Component {
                   confirmLoading={confirmLoading}
                   onCancel={this.handleCancel}
                >
-                  <Register close = {this.handleCancel}/>
+                  <Register close = {this.handleCancel} text = {this.state.txt}/>
                </Modal>
             </FormItem>
          </Form>

@@ -56,6 +56,7 @@ class Index extends Component{
          }
          if (n === arr3.length) {
             this.error();
+            this.setState({bool:false});
          }
       });
    };
