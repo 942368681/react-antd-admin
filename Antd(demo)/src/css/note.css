@@ -2,6 +2,9 @@
   background: transparent;
   border: 0;
 }
+.note .gutter-example{
+   padding-top: 0;
+}
 .note .gutter-box {
   padding: 0;
   height: 500px;
@@ -12,7 +15,11 @@
    height: 600px;
 }
 .note .ant-card{
+   border-radius: 10px;
    height: 500px;
+}
+.note .ant-card-head{
+   border-radius: 10px;
 }
 .note .noteList{
    height: 430px;
@@ -119,4 +126,9 @@ textarea{
 .calendar .ant-radio-group-small{
    position: relative;
    top: 7px;
+}
+.reset{
+   margin-left: 150px;
+   margin-top: 30px;
+   margin-bottom: 10px;
 }

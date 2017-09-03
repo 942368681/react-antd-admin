@@ -47,6 +47,18 @@ class Index extends Component{
       let n = 0;
       arr3.forEach((e,i) => {
          if (e.userName === userName && e.passWord === passWord) {
+            //登陆成功，增加访问记录
+            if (localStorage.getItem('pageView')) {
+               let date = new Date();
+               let day = date.getDay();
+               let arr0 = JSON.parse(localStorage.getItem('pageView'));
+               arr0.forEach((e,i) => {
+                  if (e.day === day) {
+                     e.num++;
+                  }
+               });
+               localStorage.setItem('pageView', JSON.stringify(arr0));
+            }
             this.setState({
                bool:true,
                user:userName
@@ -60,7 +72,24 @@ class Index extends Component{
          }
       });
    };
-
+   componentDidMount(){
+      //重置访问量和用户增加量
+      let date = new Date();
+      let day = date.getDay();
+      if (day === 1) {
+         let arr = [
+      		{day:0,num:0},
+      		{day:1,num:0},
+      		{day:2,num:0},
+      		{day:3,num:0},
+      		{day:4,num:0},
+      		{day:5,num:0},
+      		{day:6,num:0}
+      	];
+      	localStorage.setItem('pageView', JSON.stringify(arr));
+         localStorage.setItem('addUser', JSON.stringify(arr));
+      }
+   };
    render(){
       return(
          <Router>
@@ -72,7 +101,9 @@ class Index extends Component{
                }}/>
                <Route path="/SiderDemo" render={() => {
                   if (this.state.bool) {
-                     return <SiderDemo user = {this.state.user}/>
+                     return <SiderDemo
+                        user = {this.state.user}
+                     />
                   } else {
                      return <Redirect to="/" />
                   }

@@ -8,9 +8,23 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/title';
 
 class Echarts2 extends Component {
-   componentDidMount() {
+   componentDidMount(){
       // 基于准备好的dom，初始化echarts实例
       var myChart = echarts.init(document.getElementById('echarts2'));
+      var pageView = [];
+      if (localStorage.getItem('pageView')) {
+         pageView = JSON.parse(localStorage.getItem('pageView'));
+      } else {
+         pageView = [
+            {day:0,num:20},
+            {day:0,num:25},
+            {day:0,num:15},
+            {day:0,num:12},
+            {day:0,num:22},
+            {day:0,num:10},
+            {day:0,num:6}
+         ];
+      }
       // 绘制图表
       myChart.setOption({
          tooltip: {
@@ -39,13 +53,13 @@ class Echarts2 extends Component {
                smooth: true,
                stack: '总量',
                data: [
-                  120,
-                  132,
-                  101,
-                  134,
-                  90,
-                  230,
-                  210
+                  pageView[1].num,
+                  pageView[2].num,
+                  pageView[3].num,
+                  pageView[4].num,
+                  pageView[5].num,
+                  pageView[6].num,
+                  pageView[0].num
                ]
             }
          ]

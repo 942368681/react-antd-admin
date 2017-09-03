@@ -8,6 +8,7 @@ import {
    Input,
    Dropdown
 } from 'antd';
+import $ from 'jquery';
 import '../css/layout.css';
 import Bread from './breadcrumb';
 import Option_1 from './option_1';
@@ -29,13 +30,13 @@ const Search = Input.Search;
 const menu = (
    <Menu>
       <Menu.Item>
-         <Link to = "/">切换用户</Link>
+         <Link to="/">切换用户</Link>
       </Menu.Item>
       <Menu.Item>
-         <Link to = "/">退出登录</Link>
+         <Link to="/">退出登录</Link>
       </Menu.Item>
       <Menu.Item>
-         <a href = "javascript:;">个人信息</a>
+         <a href="javascript:;">个人信息</a>
       </Menu.Item>
    </Menu>
 );
@@ -49,56 +50,89 @@ class SiderDemo extends Component {
       //面包屑数据
       breadArr: ['Home'],
       //便签数据
-      arr:[
+      arr: [
          {
-           date:'2017.08.24',
-           text:'今日任务全部完成，等待验收！'
-         },
-         {
-           date:'2017.08.25',
-           text:'今天天气不错，出去走走！'
-        },
-        {
-          date:'2017.08.26',
-          text:'额呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵！'
-        }
+            id:1,
+            date: '2017.08.26',
+            text: '额呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵！'
+         }, {
+            id:2,
+            date: '2017.08.26',
+            text: '数据数据数据数据'
+         }, {
+            id:3,
+            date: '2017.08.26',
+            text: '呵呵呵呵呵呵！'
+         }, {
+            id:4,
+            date: '2017.08.25',
+            text: '今天天气不错，出去走走！'
+         }, {
+            id:5,
+            date: '2017.08.25',
+            text: '哈哈哈哈啊哈哈哈哈啊哈'
+         }, {
+            id:6,
+            date: '2017.08.25',
+            text: '无待办事项'
+         }, {
+            id:7,
+            date: '2017.08.24',
+            text: '今日任务全部完成，等待验收！'
+         }, {
+            id:8,
+            date: '2017.08.24',
+            text: '今日完成任务数：2，等待验收！'
+         }, {
+            id:9,
+            date: '2017.08.24',
+            text: '今日完成任务数：3，等待验收！'
+         }
       ]
+   };
+   componentDidMount(){
+      let h1 = $('#root').height();
+      $('.ant-layout-sider').css('height',h1);
+      $('.ant-layout').css('height',h1);
+      $(window).resize(function() {
+         let h1 = $('#root').height();
+         $('.ant-layout-sider').css('height',h1);
+         $('.ant-layout').css('height',h1);
+      });
    };
    onCollapse = (collapsed) => {
       this.setState({collapsed});
    }
    //添加便笺内容
    addNote = (data) => {
-      let {arr} =this.state;
+      let {arr} = this.state;
       let arr1 = Object.assign(arr);
       arr1.unshift(data);
-      this.setState({
-         arr:arr1
-      });
+      this.setState({arr: arr1});
    };
    //删除便笺内容
-   deleteLi = (date) => {
-      let {arr} =this.state;
+   deleteLi = (id) => {
+      let {arr} = this.state;
       let arr1 = Object.assign(arr);
-      let arr2 = arr1.filter((e,i) => {
-         return e.date !== date;
+      let arr2 = arr1.filter((e, i) => {
+         return e.id !== id;
       });
-      this.setState({
-         arr:arr2
-      });
+      this.setState({arr: arr2});
    };
    //更改便笺内容
-   changeVal = (val,date) => {
-      let {arr} =this.state;
+   changeVal = (val, id) => {
+      let {arr} = this.state;
       let arr1 = Object.assign(arr);
-      arr1.forEach((e,i) => {
-         if (e.date === date) {
+      arr1.forEach((e, i) => {
+         if (e.id === id) {
             e.text = val;
          }
       });
-      this.setState({
-         arr:arr1
-      });
+      this.setState({arr: arr1});
+   };
+   //便笺排序
+   sortList = (data) => {
+      this.setState({arr: data});
    };
    //添加收藏夹数据
    addData = (data) => {
@@ -131,7 +165,7 @@ class SiderDemo extends Component {
    };
    //生成面包屑
    getHash = (ev) => {
-      let url=decodeURI(ev.target.href);
+      let url = decodeURI(ev.target.href);
       let arr = url.split('/');
       arr.splice(0, 3);
       arr.splice(0, 1, 'Home');
@@ -215,7 +249,7 @@ class SiderDemo extends Component {
                   margin: '0 16px'
                }}>
                   {/* 面包屑导航 */}
-                  <Bread data={this.state.breadArr} back = {this.back}/> {/* 中间内容区域设置路由加载组件 */}
+                  <Bread data={this.state.breadArr} back={this.back}/> {/* 中间内容区域设置路由加载组件 */}
                   <div style={{
                      padding: 24,
                      background: '#fff',
@@ -230,10 +264,10 @@ class SiderDemo extends Component {
                         <Route path="/SiderDemo/Tizzy t" render= {() => { return <User_3 addData={this.addData} n={this.state.num} /> }}/>
                         <Route path="/SiderDemo/Favorite" render= {() => { return <Favorite data={this.state.favData} favDel = {this.favDel} /> }}/>
                         <Route path="/SiderDemo/Editor" render={() => {
-                           return <Editor addNote = {this.addNote} />
+                           return <Editor addNote={this.addNote}/>
                         }}/>
                         <Route path="/SiderDemo/Note" render={() => {
-                           return <Note data = {this.state.arr} deleteLi = {this.deleteLi} changeVal = {this.changeVal} />
+                           return <Note data={this.state.arr} deleteLi={this.deleteLi} changeVal={this.changeVal} sortList={this.sortList}/>
                         }}/>
                         <Route path="/SiderDemo/Movie" component={Movie}/>
                         <Route path="/SiderDemo/Music" component={Music}/>

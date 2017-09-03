@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Card, Row, Col, Timeline, Table, Button, Badge, Icon, message } from 'antd';
+import $ from 'jquery';
 import '../css/user.css';
 
 const columns = [
@@ -63,7 +64,6 @@ class User_1 extends Component {
    render() {
       const rowSelection = {
          onChange: (selectedRowKeys, selectedRows) => {
-            console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
             this.setState({
                selectedRowKeys:selectedRowKeys,
                selectedRows:selectedRows

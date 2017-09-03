@@ -16,25 +16,33 @@ class Editor extends Component {
    }
 
    click = () => {
+      function two(n){
+   		return n>10?''+n:'0'+n;
+   	};
       let nowTime = new Date();
       let year = nowTime.getFullYear();
-      let month = nowTime.getMonth() + 1;
-      let today = nowTime.getDate();
-      let hours = nowTime.getHours();
-      let minutes = nowTime.getMinutes();
-      let seconds = nowTime.getSeconds();
-      let time = year + '年' + month + '月' + today + '日' + hours + '时' + minutes + '分' + seconds + '秒';
+      let month = two(nowTime.getMonth() + 1);
+      let today = two(nowTime.getDate());
+      let time = year + '.' + month + '.' + today ;
       let text = this.state.txt;
       let data = {
          date: time,
-         text: text
+         text: text,
+         id: +new Date()
       }
-      this.props.addNote(data);
-      this.success();
+      if (text.length>5) {
+         this.props.addNote(data);
+         this.success();
+      } else {
+         this.error();
+      }
    };
    //信息提示
    success = () => {
       message.success('提交成功');
+   };
+   error = () => {
+      message.error('请输入不少于5个字');
    };
    render() {
       let policy = "";

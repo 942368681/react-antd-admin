@@ -44,7 +44,9 @@ class Option_1 extends Component {
                   </Col>
                   <Col className="gutter-row2" span={16}>
                      <div className="gutter-box clearfix">
-                        <Echarts1 />
+                        <Card className = "echarts1Card">
+                           <Echarts1 />
+                        </Card>
                      </div>
                   </Col>
                </Row>

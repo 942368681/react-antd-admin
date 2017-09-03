@@ -22,3 +22,19 @@
 .example-input input {
    font-size: 14px;
 }
+.table2 .ant-table-thead tr th{
+   padding-left: 4.5%;
+}
+/*.table2 .ant-table-thead tr th:nth-of-type(3){
+   padding-left: 12%;
+}*/
+.table2 .ant-table-tbody tr td{
+   padding-left: 4.5%;
+}
+
+/*.table1 .ant-table-thead tr th:nth-of-type(3){
+   padding-left: 8%;
+}
+.table1 .ant-table-tbody tr td:nth-of-type(3){
+   padding-left: 8%;
+}*/
