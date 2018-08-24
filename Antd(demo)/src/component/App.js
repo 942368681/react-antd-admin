@@ -21,6 +21,7 @@ import Movie from './movie.js';
 import Music from './music.js';
 import Editor from './editor.js';
 import Note from './note.js';
+// asd
 
 const {Header, Content, Footer, Sider} = Layout;
 const SubMenu = Menu.SubMenu;
